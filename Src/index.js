@@ -66,19 +66,15 @@ function displaynewArrivalWomen(data){
     let rightbtnW = document.querySelector("#rightW");
     rightbtnW.addEventListener("click", ()=>{
         slideImg();
+    });
+
+    data.forEach((item, i)=>{
+        let contDim = item.getBoundingClientRect();
+        let contWidth = contDim.width;
+        rightbtnW[i].addEventListener("click", () => {
+            item.scrollLeft += contWidth;
+        })
     })
-
-
-    function slideImg(){
-        if(end >= data.length-1){
-            end = 4;
-            start = 0;
-        }
-        else{
-            end+=4;
-            start+=4;
-        }
-    }
 }
 
 
@@ -257,6 +253,24 @@ function login(e){
     e.preventDefault();
     let email = document.querySelector("#email").value;
     let pass = document.querySelector("#pass").value;
+    let users = JSON.parse(localStorage.getItem("users"));
+    if(email === "" || pass === ""){
+        alert("All fields are mandatriy !");
+        return;
+    }
+    
+    if(users.email != email ){
+        alert("User Not Found Sign Up");
+        return;
+    }
+
+    if(users.email === email && users.pass !== pass){
+        alert("Password do not match");
+    }
+
+    if(users.email === email && users.pass === pass){
+        alert("Login Success");
+    }
 }
 
 
