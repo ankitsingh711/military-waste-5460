@@ -1,0 +1,15 @@
+
+https://636b04fcc07d8f936dac1e85.mockapi.io/
+
+1. Women new arrival:
+https://636b04fcc07d8f936dac1e85.mockapi.io/women_new_arrival
+
+2. Men new arrival:
+https://636b04fcc07d8f936dac1e85.mockapi.io/men_new_arrival
+
+3.Kids new arrival:
+https://636b04fcc07d8f936dac1e85.mockapi.io/kids_new_arrival
+
+4. Life new arrival:
+https://636b04fcc07d8f936dac1e85.mockapi.io/life_new_arrival
+
