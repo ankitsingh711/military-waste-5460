@@ -36,7 +36,6 @@ function nav_fun(){
 
 
 // sign up 
-let users = JSON.parse(localStorage.getItem("users"))||[];
 let signform = document.querySelector(".signup");
 signform.addEventListener("submit", signin);
 
@@ -69,8 +68,7 @@ function signin(e){
             alert("Please accept Terms and Condition");
             return;
         }
-        users.push(userObj);
-        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("users", JSON.stringify(userObj));
     }
 }
 
@@ -79,32 +77,27 @@ function signin(e){
 let loginform = document.querySelector(".loginform");
 loginform.addEventListener("submit", login);
 function login(event){
+    let users = JSON.parse(localStorage.getItem("users"));
     event.preventDefault();
-    let email = document.querySelector("#logemail");
-    let pass = document.querySelector("#logpass");
+    let email = document.querySelector("#logemail").value;
+    let pass = document.querySelector("#logpass").value;
     if(email === "" || pass === ""){
         alert("All fields are mandatriy !");
         return;
-    }else{
-        users.forEach((elem)=>{
-            check(elem)
-        })
+    }
+    
+    if(users.email != email ){
+        alert("User Not Found Sign Up");
+        return;
+    }
 
-        function check(elem){
-            if(elem.email !== email){
-                alert("User Not found");
-                return;
-            }
-            
-            if(pass !== elem.pass && elem.email === email){
-                alert("Invalid Password");
-                return;
-            } 
-            
-            if(pass === elem.pass && email===elem.email){
-                alert("Login Success");
-            }
-        }
+    if(users.email === email && users.pass !== pass){
+        alert("Password do not match");
+    }
+
+    if(users.email === email && users.pass === pass){
+        alert("Login Success");
+        window.location.href="index.html";
     }
 
 }
