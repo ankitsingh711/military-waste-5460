@@ -1,0 +1,400 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.nav{
+    justify-content: space-between;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.nav>div>a{
+    margin: 10px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+.nav a:hover{
+    opacity: 0.7;
+}
+.logo{
+    width:80%;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.logo img{
+    width: 200px;
+}
+.logo i{
+    font-size: 30px;
+}
+.logo>div:nth-child(1){
+    margin-left: 400px;
+}
+.logo>div:nth-child(2){
+    float: right;
+    padding: 10px;
+    margin-left: 400px;
+}
+#menwomen{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+#menwomen a{
+    color: white;
+    text-decoration: none; 
+}
+#menwomen>img{
+    width: 100%;
+}
+#menwomen>div:nth-child(2){
+    position: absolute;
+    color: white;
+    top: 230px;
+    right:100px;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+#women{
+    position: absolute;
+    color: white;
+    top: 250px;
+    width: 30%;
+    left:150px;
+    text-align: center;
+    margin: auto;
+}
+.kid{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    font-size: 50px;
+    color: white;
+}
+.kid>img{
+    width: 100%;
+}
+.kid>div{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: scale(50%,50%);
+}
+.life{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    font-size: 50px;
+    color: white;
+}
+.life>img{
+    width: 100%;
+}
+.life>div{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: scale(50%,50%);
+}
+.newArrivalWomen{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 10px;
+}
+.newArrivalMen{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 10px;
+}
+.newArrivalKid{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 10px;
+}
+.newArrivalLife{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 10px;
+}
+.newArrMain{
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+.newArrMain>span{
+    font-size: 30px;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+}
+.newArrMain>ul:nth-child(4){
+    list-style-type: none;
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    font-size: 30px;
+    font-weight: bold;
+}
+#leftW:hover{
+    cursor: pointer;
+}
+#rightW:hover{
+    cursor: pointer;
+}
+#leftM:hover{
+    cursor: pointer;
+}
+#rightM:hover{
+    cursor: pointer;
+}
+#leftK:hover{
+    cursor: pointer;
+}
+#rightK:hover{
+    cursor: pointer;
+}
+#leftL:hover{
+    cursor: pointer;
+}
+#rightL:hover{
+    cursor: pointer;
+}
+.newArrMain>ul:nth-child(2){
+    list-style-type: none;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.newArrMain button{
+    border: none;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+}
+.desc{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size:14px;
+}
+.desc>div{
+    margin-top: 20px;
+}
+
+.play{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+}
+.play>div{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+}
+.play>div>img:nth-child(1){
+    height: 40px;
+    margin-top: 5px;
+}
+.play>div>img:nth-child(2){
+    height: 50px;
+}
+.footer{
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding: 10px;
+}
+.footer>table{
+    width: 100%;
+    margin: auto;
+    
+}
+.footer>table>thead{
+    font-weight: bold;
+}
+tbody button{
+    border: none;
+    padding: 2px 20px;
+    background-color: black;
+    color: white;
+}
+#social{
+    list-style-type: none;
+}
+.copyright{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+#scrollTop{
+    position: fixed;
+    float: right;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding: 10px 17px;
+    margin-top: 550px;
+    text-align: center;
+    margin-right: 10px;
+    z-index: 99;
+    right: 30px;
+}
+#scrollTop:hover{
+    cursor: pointer;
+}
+
+.myAcc{
+    width: 20%;
+    padding-top: 5px;
+    text-align: center;
+    position: absolute;
+    z-index: 99;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    right: 230px;
+}
+.myAcc input{
+    width: 80%;
+    outline: none;
+}
+.submit{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.myAcc>div{
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 13px;
+    background-color: white;
+}
+#close{
+    float: right;
+    border: none;
+    padding-right: 5px;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+#close:hover{
+    cursor: pointer;
+}
+
+/* Media query */
+@media all and (min-width:600px) and (max-width:1000px){
+    .logo>div:nth-child(2){
+        margin-left: 120px;
+    }
+    .logo>div:nth-child(1){
+        margin-left: 300px;
+    }
+    #menwomen>div:nth-child(2){
+        top:100px;
+        right:100px;
+    }
+    #women{
+        top:120px;
+        left:100px;
+    }
+    #menwomen{
+        width: 100%;
+    }
+    .kid{
+        width: 100%;
+    }
+    .kid>div{
+        top:-10%;
+        left:35%
+    }
+    .life{
+        width: 100%;
+    }
+    .life>div{
+        top:-10%;
+        left:35%
+    }
+    .newArrMain>ul:nth-child(4){
+        top: 15%;
+    }
+    .newArrMain>ul:nth-child(2){
+        top: 15%;
+    }
+    .play>div{
+        width: 50%
+    }
+}
+
+@media all and (min-width:100px) and (max-width:599px){
+    #menwomen>div:nth-child(2){
+        top:70px;
+        right:60px;
+        font-size: 12px;
+    }
+    #women{
+        top:80px;
+        left:40px;
+    }
+    #menwomen{
+        width: 100%;
+    }
+    .kid{
+        width: 100%;
+    }
+    .kid>div{
+        top:-40%;
+        left:30%
+    }
+    .life{
+        width: 100%;
+    }
+    .life>div{
+        top:-10%;
+        left:35%
+    }
+    .play>div{
+        width: 60%;
+    }
+    .footer{
+        width: 100%;
+    }
+}
