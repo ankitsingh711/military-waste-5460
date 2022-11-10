@@ -1,0 +1,297 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.nav{
+    justify-content: space-between;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.nav>div>a{
+    margin: 10px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+.nav a:hover{
+    opacity: 0.7;
+}
+.logo{
+    width:80%;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.logo img{
+    width: 200px;
+}
+.logo i{
+    font-size: 30px;
+}
+.logo>div:nth-child(1){
+    margin-left: 400px;
+}
+.logo>div:nth-child(2){
+    float: right;
+    padding: 10px;
+    margin-left: 400px;
+}
+.logo>div:nth-child(2){
+    display: flex;
+}
+
+#scrollTop{
+    position: fixed;
+    float: right;
+    background-color: rgba(141, 141, 141, 0.867);
+    color: white;
+    font-size: 25px;
+    padding: 10px 17px;
+    margin-top: 550px;
+    text-align: center;
+    margin-right: 10px;
+    z-index: 99;
+    display: none;
+    right: 0;
+}
+#scrollTop:hover{
+    cursor: pointer;
+}
+
+.maincard{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.maintext{
+    position: absolute;
+    top: 35%;
+    font-size: 20px;
+    left: 10%;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+    color: white;
+    padding: 10px;
+}
+.maintext>button{
+    border: none;
+    padding: 8px 8px;
+    background-color: white;
+    color: black;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+
+.newtext{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+    margin-top: 20px;
+}
+.newtext>button{
+    border: none;
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+}
+
+.headtext{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.midcards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.maincard>img{
+    width: 100%;
+}
+
+.midcards button{
+    border: none;
+    padding: 12px 12px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+.wintercards{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+
+.wintercards button{
+    border: none;
+    padding: 12px 12px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+.cards_main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+.cards_main>div>img{
+    width: 90%;
+}
+
+.mainCards{
+    text-align: center;
+}
+
+.mainCards button{
+    border: none;
+    padding: 12px 12px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+.desc{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+
+.play{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+}
+.play>div{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+}
+.play>div>img:nth-child(1){
+    height: 40px;
+    margin-top: 5px;
+}
+.play>div>img:nth-child(2){
+    height: 50px;
+}
+.footer{
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding: 10px;
+}
+.footer>table{
+    width: 100%;
+    margin: auto;
+    
+}
+.footer>table>thead{
+    font-weight: bold;
+}
+tbody button{
+    border: none;
+    padding: 2px 20px;
+    background-color: black;
+    color: white;
+}
+#social{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+#social i{
+    color: black;
+}
+.copyright{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.smallnav{
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.smallnav input{
+    margin-top: 15px;
+    font-size: 15px;
+    outline: none;
+}
+.smallnav input:hover{
+    width: 250px;
+}
+
+.smallnav>div:nth-child(1)>ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.smallnav li{
+    margin-left: 10px;
+}
+
+@media all and (min-width:600px) and (max-width:1100px){
+    .logo>div:nth-child(2){
+        margin-left: 120px;
+    }
+    .logo>div:nth-child(1){
+        margin-left: 300px;
+    }
+    .maintext{
+        top: 20%;
+    }
+}
+
+@media all and (min-width:100px) and (max-width:599px){
+    .maintext{
+        top:10%;
+    }
+    .footer{
+        width: 100%;
+    }
+}

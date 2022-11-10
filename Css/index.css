@@ -48,6 +48,33 @@ body{
     padding: 10px;
     margin-left: 400px;
 }
+
+.smallnav{
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.smallnav input{
+    margin-top: 15px;
+    font-size: 15px;
+    outline: none;
+}
+
+.smallnav>div:nth-child(1)>ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.smallnav li{
+    margin-left: 10px;
+}
+.smallnav input:hover{
+    width: 250px;
+}
 #menwomen{
     width: 80%;
     margin: auto;
@@ -101,6 +128,10 @@ body{
     margin-top: 20px;
     position: relative;
     font-size: 50px;
+    color: white;
+}
+.life a, .kid a{
+    text-decoration: none;
     color: white;
 }
 .life>img{
@@ -255,6 +286,12 @@ tbody button{
 }
 #social{
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+#social i{
+    color: black;
 }
 .copyright{
     width: 80%;
@@ -265,7 +302,7 @@ tbody button{
 #scrollTop{
     position: fixed;
     float: right;
-    background-color: black;
+    background-color: rgba(141, 141, 141, 0.867);
     color: white;
     font-size: 25px;
     padding: 10px 17px;
@@ -273,7 +310,7 @@ tbody button{
     text-align: center;
     margin-right: 10px;
     z-index: 99;
-    right: 30px;
+    right: 0;
 }
 #scrollTop:hover{
     cursor: pointer;

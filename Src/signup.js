@@ -68,6 +68,7 @@ function signin(e){
             alert("Please accept Terms and Condition");
             return;
         }
+        alert("Sign in Successfull");
         localStorage.setItem("users", JSON.stringify(userObj));
     }
 }
