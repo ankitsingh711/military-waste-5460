@@ -112,6 +112,12 @@ tbody button{
 }
 #social{
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+#social i{
+    color: black;
 }
 .copyright{
     width: 80%;
