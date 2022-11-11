@@ -67,4 +67,14 @@ function imageResize(){
     }
 }
 
+// new arrival hidden 
 
+let newarrtext = document.querySelector(".show");
+newarrtext.addEventListener("mouseenter", ()=>{
+    let hiddendiv = document.querySelector(".newarrhide");
+    hiddendiv.style.display="block";
+})
+newarrtext.addEventListener("mouseout", ()=>{
+    let hiddendiv = document.querySelector(".newarrhide");
+    hiddendiv.style.display="none";
+})
