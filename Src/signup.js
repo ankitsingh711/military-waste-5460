@@ -38,9 +38,12 @@ function nav_fun(){
 // sign up 
 let signform = document.querySelector(".signup");
 signform.addEventListener("submit", signin);
+let userArr = JSON.parse(localStorage.getItem("users"))||[];
+
 
 function signin(e){
     e.preventDefault();
+    let email_flag = true;
     let gender = document.querySelector(".gender").value;
     let acad = document.querySelector("#academic").value;
     let fname = document.querySelector("#fname").value;
@@ -55,9 +58,30 @@ function signin(e){
         email,
         pass,
     }
+    if(pass.length < 6 || pass.length>10){
+        alert("Password length should be in between 6 to 10");
+        return;
+    }
+
+    // let regularExpression = /^(\S)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{6,10}$/;
+
+    // if(!regularExpression.test(pass)){
+    //     alert("Password must contain one small, one capital and one special charecter");
+    //     return;
+    // }
 
     if(gender==""||acad==""||fname==""||lname==""||email==""||pass==""||cpass==""){
-        alert("All fields are mandatory")
+        alert("All fields are mandatory");
+        return;
+    }
+
+    userArr.forEach((elem)=>{
+        if(elem.email === email){
+            email_flag = false;
+        }
+    })
+    if(email_flag===false){
+        alert("Already registered Login")
     }else{
         if(cpass !== pass){
             alert("Password do not match")
@@ -68,8 +92,9 @@ function signin(e){
             alert("Please accept Terms and Condition");
             return;
         }
+        userArr.push(userObj);
         alert("Sign in Successfull");
-        localStorage.setItem("users", JSON.stringify(userObj));
+        localStorage.setItem("users", JSON.stringify(userArr));
     }
 }
 
@@ -78,27 +103,40 @@ function signin(e){
 let loginform = document.querySelector(".loginform");
 loginform.addEventListener("submit", login);
 function login(event){
-    let users = JSON.parse(localStorage.getItem("users"));
     event.preventDefault();
+    let email_flag = false;
+    let pass_flag = false;
     let email = document.querySelector("#logemail").value;
     let pass = document.querySelector("#logpass").value;
     if(email === "" || pass === ""){
         alert("All fields are mandatriy !");
         return;
     }
-    
-    if(users.email != email ){
-        alert("User Not Found Sign Up");
+    console.log(email)
+    userArr.forEach((elem)=>{
+        if(elem.email === email){
+            email_flag = true;
+        }
+        console.log(elem.email)
+
+        if(elem.pass === pass){
+            pass_flag = true;
+        }
+    })
+
+    if(!email_flag){
+        alert("User not found !");
         return;
     }
 
-    if(users.email === email && users.pass !== pass){
+    if(!pass_flag){
         alert("Password do not match");
+        return;
     }
 
-    if(users.email === email && users.pass === pass){
+    if(email_flag && pass_flag){
         alert("Login Success");
-        window.location.href="index.html";
+        window.location.href = "index.html";
     }
 
 }

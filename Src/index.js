@@ -67,14 +67,6 @@ function displaynewArrivalWomen(data){
     rightbtnW.addEventListener("click", ()=>{
         slideImg();
     });
-
-    data.forEach((item, i)=>{
-        let contDim = item.getBoundingClientRect();
-        let contWidth = contDim.width;
-        rightbtnW[i].addEventListener("click", () => {
-            item.scrollLeft += contWidth;
-        })
-    })
 }
 
 
@@ -253,25 +245,23 @@ function login(e){
     e.preventDefault();
     let email = document.querySelector("#email").value;
     let pass = document.querySelector("#pass").value;
-    let users = JSON.parse(localStorage.getItem("users"));
-    if(email === "" || pass === ""){
-        alert("All fields are mandatriy !");
-        return;
-    }
-    
-    if(users.email != email ){
-        alert("User Not Found Sign Up");
-        return;
-    }
-
-    if(users.email === email && users.pass !== pass){
-        alert("Password do not match");
-    }
-
-    if(users.email === email && users.pass === pass){
+    let users = JSON.parse(localStorage.getItem("users"))||{};
+    if(email===""||pass===""){
+        alert("All fields are mandatory !")
+    }else if(email !== users.email){
+        alert("User not found")
+    }else if(email === users.email && pass !== users.pass){
+        alert("Password don't match")
+    }else{
         alert("Login Success");
     }
 }
+
+let playstore = document.querySelector("#playstore");
+
+playstore.addEventListener("click", ()=>{
+    window.location.href = "'https://play.google.com/store/apps/details?id=com.exampleapp'"
+})
 
 
 

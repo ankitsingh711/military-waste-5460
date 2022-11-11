@@ -85,12 +85,16 @@ body{
     color: white;
     padding: 10px;
 }
-.maintext>button{
+.maintext>a>button{
     border: none;
     padding: 8px 8px;
     background-color: white;
     color: black;
     font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+
+.maintext>a>button:hover{
+    cursor: pointer;
 }
 
 .newtext{
@@ -102,11 +106,14 @@ body{
     font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
     margin-top: 20px;
 }
-.newtext>button{
+.newtext button{
     border: none;
     padding: 10px 10px;
     background-color: black;
     color: white;
+}
+.newtext button:hover{
+    cursor: pointer;
 }
 
 .headtext{
@@ -275,6 +282,66 @@ tbody button{
     margin-left: 10px;
 }
 
+.newarrhide{
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    z-index: 99;
+    background-color: white;
+    display: none;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+.show{
+    cursor: pointer;
+}
+.newarrhide>div:nth-child(1){
+    width: 90%;
+    display: flex;
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px;
+}
+.newarrhide>div:nth-child(1)>span{
+    margin-left: 140px;
+}
+.newarrhide>div:nth-child(2){
+    width: 100%;
+    display: flex;
+}
+.newarrhide>div:nth-child(2)>div:nth-child(2)>img{
+    width: 100%;
+}
+.newarrhide>div:nth-child(2)>div:nth-child(1){
+    width: 50%;
+    position: relative;
+}
+.newarrhide>div:nth-child(2)>div:nth-child(2){
+    width: 50%;
+    position: relative;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+#newarrhidetext{
+    top: 60%;
+    right: 17%;
+    color: white;
+    font-size: 22px;
+}
+#newarrhidetext button{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    font-family: Futura-Medium,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+}
+.newarrhide table{
+    width: 60%;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+#newarrhidetext{
+    position: absolute;
+}
 @media all and (min-width:600px) and (max-width:1100px){
     .logo>div:nth-child(2){
         margin-left: 120px;
