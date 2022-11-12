@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paytm</title>
+    <style>
+        .payment{
+            width: 25%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .payment button{
+            border: none;
+            background-color: rgb(51, 51, 246);
+            color: white;
+            padding: 10px 40px;
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: rgb(51, 51, 246);
+        }
+        span{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+
+        .otp{
+            position: absolute;
+            z-index: 99;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 50px;
+            width: 100%;
+            background-color: rgb(51, 51, 246);
+            color: white;
+            border: 2px solid white;
+            top: 27%;
+            left: -20px;
+            display: none;
+            text-align: center;
+        }
+        .otp input{
+            height: 1rem;
+            font-size: 17px;
+            outline: none;
+        }
+
+        #otp_submit{
+            border: none;
+            background-color: white;
+            color: black;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="payment">
+        <h1>Paytm</h1>
+        <div>
+            <img src="https://s3.eu-central-1.amazonaws.com/qrcg-free-editor.egodit.org/main/assets/images/websiteQRCode_noFrame.png" alt="qr code" width="70%"><br>
+            <span>Scan Qr Code for instant and easy payment</span>
+        </div>
+        <h3 class="name"></h3>
+        <h3 class="paym"></h3>
+        <button id="submit">Pay Now</button>
+        <div class="otp">
+            <span class="showotp"></span><br><br>
+            <label for="">Enter OTP to Proceed Payment</label><br><br>
+            <input type="text" class="otpval" value="3245"><br><br>
+            <input id="otp_submit" type="submit"><br><br>
+        </div>
+    </div>
+</body>
+<script src="./Src/pam.js"></script>
+</html>

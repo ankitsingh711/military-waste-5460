@@ -144,38 +144,36 @@ body{
     transform: scale(50%,50%);
 }
 .newArrivalWomen{
-    width: 80%;
+    width: 100%;
     margin: auto;
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    justify-content: space-evenly;
     margin-top: 10px;
 }
 .newArrivalMen{
-    width: 80%;
+    width: 100%;
     margin: auto;
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 .newArrivalKid{
-    width: 80%;
+    width: 100%;
     margin: auto;
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 .newArrivalLife{
-    width: 80%;
+    width: 100%;
     margin: auto;
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 .newArrMain{
+    width: 80%;
+    margin: auto;
     position: relative;
     text-align: center;
     margin-top: 10px;

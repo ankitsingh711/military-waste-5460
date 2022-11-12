@@ -58,8 +58,10 @@ function signin(e){
         email,
         pass,
     }
-    if(pass.length < 6 || pass.length>10){
-        alert("Password length should be in between 6 to 10");
+    
+    let passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,10}$/;
+    if(!pass.match(passw)){
+        alert("Password must contain one Upper case and One lower case and one Number");
         return;
     }
 
@@ -95,6 +97,7 @@ function signin(e){
         userArr.push(userObj);
         alert("Sign in Successfull");
         localStorage.setItem("users", JSON.stringify(userArr));
+        localStorage.setItem("unique", JSON.stringify(userObj));
     }
 }
 
@@ -136,7 +139,10 @@ function login(event){
 
     if(email_flag && pass_flag){
         alert("Login Success");
+        localStorage.setItem("isLogin", true);
         window.location.href = "index.html";
+    }else{
+        localStorage.setItem("isLogin", false);
     }
 
 }

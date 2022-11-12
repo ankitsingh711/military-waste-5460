@@ -140,3 +140,5 @@ let t =  cartbag.reduce((acc,elem,i)=>{
 },0)
 
 total.innerText = "Grand Total:"+" "+"$"+t;
+
+
