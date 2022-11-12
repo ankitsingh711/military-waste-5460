@@ -107,3 +107,4 @@ function displaynewArrivalMen(data){
         appendDiv.append(div)
     }
 }
+

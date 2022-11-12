@@ -87,13 +87,17 @@ body{
     margin: auto;
     position: relative;
 }
-.proceed>button{
+.proceed>a>button{
     border: none;
     padding: 10px 15px ;
     background-color: black;
     color: white;
     right: 20px;
     position: absolute;
+}
+
+.proceed button:hover{
+    cursor: pointer;
 }
 .proceed>div{
     width: 23%;
