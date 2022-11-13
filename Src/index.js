@@ -330,7 +330,7 @@ if(islogin){
             `;
             let change = document.querySelector("#myacc");
             change.innerText = "My Account";
-            let cross = document.querySelector("#cross");
+            let cross = document.querySelector("#close");
             cross.addEventListener("click", ()=>{
                 let showAcc = document.querySelector(".myAcc");
                 showAcc.style.display="none";

@@ -108,3 +108,14 @@ function displaynewArrivalMen(data){
     }
 }
 
+//Login check it's or not:
+let login_check = localStorage.getItem("isLogin");
+let user = JSON.parse(localStorage.getItem("unique"));
+if(login_check){
+    let myAcc = document.querySelector("#myacc");
+    myAcc.innerText = "Hello !"+" "+user.name;
+}else if(!login_check){
+    let myAcc = document.querySelector("#myacc");
+    myAcc.innerText = "My Account";
+}
+
