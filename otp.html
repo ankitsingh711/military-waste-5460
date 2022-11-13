@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        .otp{
+            position: absolute;
+            z-index: 99;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 50px;
+            width: 100%;
+            background-color: rgb(51, 51, 246);
+            color: white;
+            border: 2px solid white;
+            top: 27%;
+            left: -20px;
+            display: none;
+            text-align: center;
+        }
+        .otp input{
+            height: 1rem;
+            font-size: 17px;
+            outline: none;
+        }
+
+        #otp_submit{
+            border: none;
+            background-color: white;
+            color: black;
+            padding: 20px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="otp">
+        <span class="showotp"></span><br><br>
+        <label for="">Enter OTP to Proceed Payment</label><br><br>
+        <input type="text" class="otpval"><br><br>
+        <input id="otp_submit" type="submit"><br><br>
+    </div>
+</body>
+</html>
+<script>
+    let otp = document.querySelector(".otp");
+    let otp_val = document.querySelector(".otpval");    
+    let random = Math.floor(Math.random()*9000+1000);
+    let show_otp = document.querySelector(".showotp");  
+    otp.style.display="block";
+    show_otp.innerText = "Your OTP is:"+" "+random;
+    let otp_submit = document.querySelector("#otp_submit");
+    otp_submit.addEventListener("click", () => {
+        otpCheck(); 
+    })
+
+    function otpCheck(){
+        console.log(otp_val)
+        if(otp_val.value == random){
+            alert("Payment Success");
+            otp.style.display="none";
+            localStorage.setItem("cart", JSON.stringify([]));
+            window.location.href="cart.html";
+        }else if(otp_val != random){
+            alert("OTP is wrong");
+            otp.style.display="none";
+        }
+    }
+</script>

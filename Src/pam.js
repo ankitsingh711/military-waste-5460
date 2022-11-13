@@ -10,28 +10,12 @@ let name = document.querySelector(".name");
 name.innerText  = user.name;
 let random = Math.floor(Math.random()*9000+1000);
 let submit = document.querySelector("#submit");
-let otp = document.querySelector(".otp");
-let otp_val = document.querySelector(".otpval");
-let show_otp = document.querySelector(".showotp");
 submit.addEventListener("click", () => {
-    otp.style.display="block";
-    show_otp.innerText = "Your OTP is:"+" "+random;
-    let otp_submit = document.querySelector("#otp_submit");
-    otp_submit.addEventListener("click", () => {
-        otpCheck(); 
-    })
+    if(total_price===0){
+        alert("Not enough money to pay");
+        return;
+    }
+    window.location.href="otp.html";
 })
 
 
-function otpCheck(){
-    console.log(otp_val)
-    if(otp_val.value == random){
-        alert("Payment Success");
-        otp.style.display="none";
-        localStorage.setItem("cart", JSON.stringify([]));
-        window.location.href="cart.html";
-    }else if(otp_val != random){
-        alert("OTP is wrong");
-        otp.style.display="none";
-    }
-}

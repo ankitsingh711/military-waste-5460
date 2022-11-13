@@ -34,34 +34,6 @@
             cursor: pointer;
         }
 
-        .otp{
-            position: absolute;
-            z-index: 99;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding: 50px;
-            width: 100%;
-            background-color: rgb(51, 51, 246);
-            color: white;
-            border: 2px solid white;
-            top: 27%;
-            left: -20px;
-            display: none;
-            text-align: center;
-        }
-        .otp input{
-            height: 1rem;
-            font-size: 17px;
-            outline: none;
-        }
-
-        #otp_submit{
-            border: none;
-            background-color: white;
-            color: black;
-            padding: 20px 20px;
-            text-align: center;
-        }
-
     </style>
 </head>
 <body>
@@ -74,12 +46,6 @@
         <h3 class="name"></h3>
         <h3 class="paym"></h3>
         <button id="submit">Pay Now</button>
-        <div class="otp">
-            <span class="showotp"></span><br><br>
-            <label for="">Enter OTP to Proceed Payment</label><br><br>
-            <input type="text" class="otpval"><br><br>
-            <input id="otp_submit" type="submit"><br><br>
-        </div>
     </div>
 </body>
 <script src="./Src/pam.js"></script>
